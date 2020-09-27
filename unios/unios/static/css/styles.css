@@ -1,0 +1,66 @@
+/* Navbar */
+nav {
+    height: 55px;
+}
+
+.nav li a {
+    color: white;
+    margin: 12px;
+    text-transform: uppercase;
+}
+
+.nav a:hover {
+    color: #005bbd;
+    text-decoration: none;
+}
+
+#myNavbar li {
+    font-size: 0.8rem;
+}
+
+/* Fix horizontal scroll */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+ }
+
+body {
+    font-family: "Poppins",sans-serif;
+}
+
+/* Navbar scrolling */
+header .bg-dark {
+    background:transparent !important;
+    transition:0.75s ease;
+}
+header .bg-dark.scrolled {
+    background:#1b1d20 !important;
+}
+
+/* Navbar under the CMS Admin bar when logged */
+.cms-toolbar-expanded body, .cms-toolbar-expanded .fixed-top{
+    top: 45px;
+}
+
+/* Carousel settings */
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+#carouselHeader p {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+/* Footer */
+
+footer {
+    background-color: #1b1d20;
+    margin-top: 40px;
+    padding: 25px;
+}
+
+/* Basic color */
+/* #42698c */
