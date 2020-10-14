@@ -1,3 +1,13 @@
+/* Fix horizontal scroll */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+ }
+
+body {
+    font-family: "Poppins",sans-serif;
+}
+
 /* Navbar */
 nav {
     height: 55px;
@@ -7,25 +17,20 @@ nav {
     color: white;
     margin: 12px;
     text-transform: uppercase;
+    font-weight: 400;
 }
 
 .nav a:hover {
-    color: #005bbd;
+    color: #636363;
     text-decoration: none;
+}
+
+.bg-dark.scrolled a:hover {
+    color: #005bbd;
 }
 
 #myNavbar li {
     font-size: 0.8rem;
-}
-
-/* Fix horizontal scroll */
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
- }
-
-body {
-    font-family: "Poppins",sans-serif;
 }
 
 /* Navbar scrolling */
@@ -43,7 +48,6 @@ header .bg-dark.scrolled {
 }
 
 /* Carousel settings */
-
 h1 {
     font-size: 3.5rem;
     font-weight: 700;
@@ -54,8 +58,45 @@ h1 {
     font-weight: 400;
 }
 
-/* Footer */
+/* Homepage - Karty sluzeb */
+.card {
+    width: auto;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    background-color: #42698c;
+}
 
+.card:hover {
+    background-color: #4e8abe;
+}
+
+.card-body img {
+    margin-top: -60px;
+    margin-bottom: 15px;
+}
+
+/* Velky nadpis */
+.nadpis {
+    text-align: center;
+    color: white;
+    background-color: #42698c;
+    padding: 35px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+/* Collaboration img */
+#spolupracujeme img {
+    -webkit-filter: grayscale(1); 
+    filter: grayscale(1); 
+}
+
+#spolupracujeme img:hover {
+    -webkit-filter: grayscale(0); 
+    filter: none;
+}
+
+/* Footer */
 footer {
     background-color: #1b1d20;
     margin-top: 40px;
