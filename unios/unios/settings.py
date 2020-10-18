@@ -179,6 +179,8 @@ INSTALLED_APPS = [
     'djangocms_snippet',
     'djangocms_googlemap',
     'djangocms_video',
+    'djangocms_html_tags',
+    'light_gallery',
     'unios'
 ]
 

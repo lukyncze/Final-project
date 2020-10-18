@@ -25,7 +25,7 @@ nav {
     text-decoration: none;
 }
 
-.bg-dark.scrolled a:hover {
+.nav .bg-dark.scrolled a:hover {
     color: #005bbd;
 }
 
@@ -48,7 +48,7 @@ header .bg-dark.scrolled {
 }
 
 /* Carousel settings */
-h1 {
+header h1 {
     font-size: 3.5rem;
     font-weight: 700;
 }
@@ -60,19 +60,27 @@ h1 {
 
 /* Homepage - Karty sluzeb */
 .card {
+    color: white;
     width: auto;
     margin-top: 35px;
     margin-bottom: 20px;
     background-color: #42698c;
 }
 
-.card:hover {
+.cards-home .card:hover {
     background-color: #4e8abe;
 }
 
 .card-body img {
     margin-top: -60px;
     margin-bottom: 15px;
+}
+
+/* Elementy stránek */
+.text-prouzek {
+    margin: 0px 0px 20px 50px;
+    padding: 15px 0px 5px 10px;
+    border-left: 5px solid #42698c;
 }
 
 /* Velky nadpis */
