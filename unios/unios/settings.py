@@ -181,6 +181,7 @@ INSTALLED_APPS = [
     'djangocms_video',
     'djangocms_html_tags',
     'light_gallery',
+    #'cms_forms',
     'unios'
 ]
 

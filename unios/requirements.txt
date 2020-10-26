@@ -12,6 +12,8 @@ djangocms-video>=2.1,<2.4
 djangocms-file>=2.3,<2.5
 djangocms-picture>=2.3,<2.5
 djangocms-bootstrap4>=1.5,<1.7
+djangocms_html_tags
+djangocms-light-gallery
 easy_thumbnails
 django-filer>=1.3
 Django<3.1
