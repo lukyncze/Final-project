@@ -181,7 +181,10 @@ INSTALLED_APPS = [
     'djangocms_video',
     'djangocms_html_tags',
     'light_gallery',
-    #'cms_forms',
+    'absolute',
+    'aldryn_forms',
+    'aldryn_forms.contrib.email_notifications',
+    'emailit',
     'unios'
 ]
 
