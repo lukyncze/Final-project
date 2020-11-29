@@ -1,6 +1,8 @@
 :root {
     --default-blue: #42698c;
-    --grey-bg: #1b1d20;
+    --default-grey: #1b1d20;
+    --second-grey: #636363;
+    --nav-link-color: #0c67b6;
     --ani-ico-1: rotate(0deg);
     --ani-ico-2: rotate(135deg);
     --ani-ico-3: rotate(-135deg);
@@ -8,10 +10,21 @@
     --ani-trans-2: .25s ease-in-out;
 }
 
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Font */
 body {
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins",sans-serif;    
 }
+
+/* Headings */
+/*
+【N】【a】【s】【t】【y】【l】【o】【v】【a】【t】
+【n】【a】【d】【p】【i】【s】【y】
+*/
 
 /* Fix horizontal scroll */
 html, body {
@@ -32,12 +45,12 @@ nav {
 }
 
 .nav a:hover {
-    color: #636363;
+    color: black;
     text-decoration: none;
 }
 
-.nav .bg-dark.scrolled a:hover {
-    color: #005bbd;
+.navbar.bg-dark.scrolled a:hover {
+    color: var(--nav-link-color);
 }
 
 #myNavbar li {
@@ -49,8 +62,9 @@ header .bg-dark {
     background:transparent !important;
     transition:0.75s ease;
 }
+
 header .bg-dark.scrolled {
-    background: var(--grey-bg) !important;
+    background: var(--default-grey) !important;
 }
 
 /* Navbar under the CMS Admin bar when logged */
@@ -85,13 +99,31 @@ header .bg-dark.scrolled {
 .card {
     color: white;
     width: auto;
+    height: auto;
     margin-top: 35px;
     margin-bottom: 20px;
     background-color: var(--default-blue);
 }
 
-.cards-home .card:hover {
+.cards-home .card:hover,
+.cards-contact .card:hover {
     background-color: #4e8abe;
+}
+
+.cards-home a {
+    color: white;
+}
+
+.cards-contact a {
+    color: #b4b4b4;
+}
+
+.cards-contact .card:hover a {
+    color: #d3d3d3;
+}
+
+.card:hover img {
+    animation: rotate360 5s infinite linear;
 }
 
 .card-body img {
@@ -113,10 +145,12 @@ ul {
 .nadpis {
     text-align: center;
     color: white;
-    background-color: var(--default-blue);
     padding: 35px;
-    margin-top: 40px;
-    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+.fotky img {
+    margin-bottom: 5px;
 }
 
 /* Galerry */
@@ -130,35 +164,68 @@ ul {
 }
 
 /* Collaboration img */
-#spolupracujeme img {
+#spolupracujeme {
+    background-color: var(--second-grey);
+    margin-bottom: 10px;
+}
+
+#spolupracujeme-firmy img {
     -webkit-filter: grayscale(1); 
     filter: grayscale(1); 
 }
 
-#spolupracujeme img:hover {
+#spolupracujeme-firmy img:hover {
     -webkit-filter: grayscale(0); 
     filter: none;
 }
 
+/* Contact us */
+#kontakt {
+    background-color: var(--default-blue);
+}
+
+#kontakt a {
+    color: white;
+}
+
+.coi {
+    font-size: 0.8rem;
+}
+
 /* Footer */
 footer {
-    background-color: var(--grey-bg);
-    margin-top: 40px;
+    background-color: var(--default-grey);
     padding: 35px;
-    font-size: 1.1rem;
+    font-size: 1rem;
+}
+
+footer a {
+    font-size: 0.9rem;
 }
 
 /* Forms */
-/*
-【U】【p】【r】【a】【v】【i】【t】
-【f】【o】【r】【m】【u】【l】【á】【ř】
-【v】
-【k】【o】【n】【t】【a】【k】【t】【e】【c】【h】【!】
-*/
+label, button {
+    margin-top: 15px;
+}
+
+input, select, textarea {
+    width: 100%;
+}
+
+.cms-form p {
+    margin-top: 5px;
+    margin-bottom: -5px;
+    font-size: 1rem;
+    color: red;
+}
 
 /* Mobile responsive navbar */ 
 body.mobile-nav-active {
-    overflow: hidden; 
+    overflow: hidden;
+}
+
+body.mobile-nav-active a:hover {
+    color: var(--nav-link-color);
 }
 
 .mobile-nav { 
@@ -169,7 +236,7 @@ body.mobile-nav-active {
     width: 30px;
     height: 20px;
     position: relative;
-    margin: 0px;
+    margin: -12px -15px;
     -webkit-transform: var(--ani-ico-1);
     -moz-transform: var(--ani-ico-1);
     -o-transform: var(--ani-ico-1);
@@ -260,13 +327,49 @@ body.mobile-nav-active {
     padding: 15px;
     border-radius: 10px;
     font-size: 18px;
-    background-color: var(--grey-bg);
+    background-color: var(--default-grey);
     color: white;
     cursor: pointer;
 }
 
 #scrollToTop:hover {
     background: #343a40;
+}
+
+/* Preloader */
+.preloader {
+    background: var(--default-blue);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5000;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader img {
+    animation: rotate360 3s infinite linear;
+}
+
+.preloader-disappeared {
+    animation: disappear 2s forwards;
+}
+
+/* Keyframes */
+@keyframes rotate360 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes disappear {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 /* Media settings - Hero image */

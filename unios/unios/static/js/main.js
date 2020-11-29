@@ -1,7 +1,7 @@
 $(function() {
     // Render fixed-top navbar when scrolled down
     $(window).scroll(function(){
-        $('nav').toggleClass('scrolled', $(this).scrollTop() > 25);
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 5);
     });
 
     // Solves responsive mobile navigation bar
@@ -36,5 +36,10 @@ $(function() {
         $("html, body").animate({
             scrollTop: 0
         }, 400);
+    });
+
+    // Preloader
+    $(window).on('load',function(){
+        $('.preloader').addClass("preloader-disappeared");
     });
 });
