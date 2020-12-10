@@ -59,8 +59,8 @@ nav {
 
 /* Navbar scrolling */
 header .bg-dark {
-    background:transparent !important;
-    transition:0.75s ease;
+    background: transparent !important;
+    transition: 0.75s ease;
 }
 
 header .bg-dark.scrolled {
@@ -83,7 +83,16 @@ header .bg-dark.scrolled {
     height: 360px;
     padding-top: 140px;
 }
+/*
+.hero2 {
+    margin-top: 50px;
+}
 
+.hero2 p {
+    padding: 10px 0px;
+    background-color: var(--default-blue);
+}
+*/
 .banner-nadpis h1 {
     font-size: 4rem;
     font-weight: 700;
@@ -355,7 +364,7 @@ body.mobile-nav-active a:hover {
 }
 
 .preloader-disappeared {
-    animation: disappear 2s forwards;
+    animation: disappear 1.5s forwards;
 }
 
 /* Keyframes */

@@ -39,7 +39,13 @@ $(function() {
     });
 
     // Preloader
-    $(window).on('load',function(){
-        $('.preloader').addClass("preloader-disappeared");
-    });
+    $('.preloader').addClass("preloader-disappeared");
+
+    // Show department instead of e-mails
+    $('#id_presmerovani option:eq(1)').text('Vedení');
+    $('#id_presmerovani option:eq(2)').text('Servis a generální opravy');
+    $('#id_presmerovani option:eq(3)').text('Elektro');
+    $('#id_presmerovani option:eq(4)').text('Nákup a zásobování');
+    $('#id_presmerovani option:eq(5)').text('Náhradní díly a kooperace (Crhonek)');
+    $('#id_presmerovani option:eq(6)').text('Náhradní díly a kooperace (Podlesný)');
 });
