@@ -1,13 +1,22 @@
+/* Declaring global variables */
 :root {
     --default-blue: #42698c;
+    --second-blue: #4e8abe;
     --default-grey: #1b1d20;
     --second-grey: #636363;
+    --button-grey: #343a40;
     --nav-link-color: #0c67b6;
     --ani-ico-1: rotate(0deg);
     --ani-ico-2: rotate(135deg);
     --ani-ico-3: rotate(-135deg);
     --ani-trans-1: .5s ease-in-out;
     --ani-trans-2: .25s ease-in-out;
+}
+
+/* Mouse selection settings */
+::selection, ::-moz-selection {
+    color: white;
+	background-color: var(--second-blue);
 }
 
 /* Smooth scroll */
@@ -35,18 +44,44 @@ html, body {
 /* Navbar */
 nav {
     height: 55px;
+    display: block;
+}
+
+.nav li {
+    margin: 10px;
+    border: none;
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    height: 100%;
 }
 
 .nav li a {
+    display: block;
     color: white;
-    margin: 12px;
     text-transform: uppercase;
     font-weight: 400;
 }
 
 .nav a:hover {
-    color: black;
     text-decoration: none;
+}
+
+nav:not(.scrolled) a::after {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    left: 50%;
+    bottom: 0;
+    background-color: white;
+    transition: all ease-in-out .25s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 .navbar.bg-dark.scrolled a:hover {
@@ -54,7 +89,7 @@ nav {
 }
 
 #myNavbar li {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
 }
 
 /* Navbar scrolling */
@@ -80,28 +115,58 @@ header .bg-dark.scrolled {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+}
+
+.hero-home {
     height: 360px;
-    padding-top: 140px;
-}
-/*
-.hero2 {
-    margin-top: 50px;
+    padding-top: 100px;
 }
 
-.hero2 p {
-    padding: 10px 0px;
-    background-color: var(--default-blue);
-}
-*/
-.banner-nadpis h1 {
-    font-size: 4rem;
-    font-weight: 700;
+.hero-pages {
+    height: 240px;
+    padding-top: 110px;
 }
 
-.banner-nadpis p {
-    font-size: 1.25rem;
+.hero-home h1 {
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.hero-pages h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.banner-nadpis #slogan {
+    font-size: 1.5rem;
     font-weight: 400;
-    padding-top: 20px;
+    margin-bottom: 1rem;
+}
+
+.banner-nadpis button {
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+
+.btn-dark {
+    background-color: var(--default-grey);
+    border-color: var(--default-grey);
+}
+
+.btn-dark:hover {
+    background-color: var(--button-grey);
+    border-color: var(--button-grey);
+}
+
+.btn-light {
+    background-color: white;
+    border-color: white;
+}
+
+.btn-light:hover {
+    background-color: #c7c7c7;
+    border-color: #c7c7c7;
 }
 
 /* Cards */
@@ -116,7 +181,7 @@ header .bg-dark.scrolled {
 
 .cards-home .card:hover,
 .cards-contact .card:hover {
-    background-color: #4e8abe;
+    background-color: var(--second-blue);
 }
 
 .cards-home a {
@@ -141,6 +206,33 @@ header .bg-dark.scrolled {
 }
 
 /* Website elements */
+.sekce {
+    margin-top: 40px;
+}
+
+.sekce h4 {
+    padding: 20px;
+    color: white;
+    background-color: var(--default-blue);
+}
+
+.sekce a:hover {
+    text-decoration: none;
+}
+
+.sekce a:hover h4 {
+    background-color: var(--second-blue);
+}
+
+.sekce a:hover h4, 
+.sekce a:hover img {
+    box-shadow: #000000aa 2px 2px 15px;
+}
+
+.rozsirene-sluzby {
+    font-size: 0.85rem;
+}
+
 .text-prouzek {
     margin: 0px 0px 20px 50px;
     padding: 15px 0px 5px 10px;
@@ -152,6 +244,7 @@ ul {
 }
 
 .nadpis {
+    font-size: 2rem;
     text-align: center;
     color: white;
     padding: 35px;
@@ -162,11 +255,7 @@ ul {
     margin-bottom: 5px;
 }
 
-/* Galerry */
-.light-gallery-plugin {
-    margin-top: 50px;
-}
-
+/* Gallery */
 .light-gallery-plugin img {
     margin-left: 2px;
     margin-bottom: 7px;
@@ -219,6 +308,15 @@ label, button {
 
 input, select, textarea {
     width: 100%;
+    padding: 5px;
+}
+
+fieldset button {
+    background-color: var(--default-blue);
+    border-color: var(--button-grey);
+    border-radius: 8px;
+    color: white;
+    padding: 8px;
 }
 
 .cms-form p {
@@ -235,6 +333,10 @@ body.mobile-nav-active {
 
 body.mobile-nav-active a:hover {
     color: var(--nav-link-color);
+}
+
+body.mobile-nav-active .nav a::after {
+    visibility: hidden;
 }
 
 .mobile-nav { 
@@ -342,7 +444,7 @@ body.mobile-nav-active a:hover {
 }
 
 #scrollToTop:hover {
-    background: #343a40;
+    background: var(--button-grey);
 }
 
 /* Preloader */
@@ -383,9 +485,14 @@ body.mobile-nav-active a:hover {
 
 /* Media settings - Hero image */
 @media screen and (min-width: 2000px){
-    .hero {
-        height: 480px;
-        padding-top: 180px;
+    .hero-home {
+        height: 360px;
+        padding-top: 110px;
+    }
+    
+    .hero-pages {
+        height: 300px;
+        padding-top: 110px;
     }
 
     .banner-nadpis h1 {
@@ -402,29 +509,48 @@ body.mobile-nav-active a:hover {
 }
 
 @media screen and (max-width: 768px){
-    .hero {
-        height: 240px;
+    .hero-home {
+        height: 280px;
+        padding-top: 80px;
+    }
+    
+    .hero-pages {
+        height: 200px;
         padding-top: 80px;
     }
 
     .banner-nadpis h1 {
+        font-size: 3.5rem;
+    }
+
+    .banner-nadpis #slogan {
+        font-size: 1.1rem;
+        margin-bottom: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 524px){
+    .banner-nadpis h1 {
         font-size: 3rem;
     }
-}
 
-@media screen and (max-width: 576px){
-    .banner-nadpis h1 {
-        font-size: 2.75rem;
-    }
-
-    .banner-nadpis p {
+    .banner-nadpis #slogan {
         font-size: 1rem;
+        margin-bottom: 0.2rem;
     }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 425px){
     .banner-nadpis h1 {
         font-size: 2.25rem;
+    }
+
+    .banner-nadpis #slogan {
+        font-size: 0.9rem;
+    }
+
+    .banner-nadpis button {
+        font-size: 1rem;
     }
 }
 
@@ -497,3 +623,7 @@ body.mobile-nav-active a:hover {
         font-size: 0.6rem;
     }
 }
+/*
+【r】【e】【s】【p】【o】【n】【z】【i】【v】【n】【o】【s】【t】
+【w】【e】【b】【u】
+*/

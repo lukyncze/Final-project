@@ -179,7 +179,6 @@ INSTALLED_APPS = [
     'djangocms_snippet',
     'djangocms_googlemap',
     'djangocms_video',
-    'djangocms_html_tags',
     'light_gallery',
     'absolute',
     'aldryn_forms',
@@ -191,6 +190,7 @@ INSTALLED_APPS = [
 LANGUAGES = (
     ## Customize this
     ('cs', gettext('cs')),
+    ('en', gettext('en')),
 )
 
 CMS_LANGUAGES = {
@@ -213,9 +213,8 @@ CMS_LANGUAGES = {
 
 CMS_TEMPLATES = (
     ## Customize this
-    ('fullwidth.html', 'Fullwidth'),
-    ('sidebar_left.html', 'Sidebar Left'),
-    ('sidebar_right.html', 'Sidebar Right')
+    ('home.html', 'Úvodní stránka'),
+    ('fullwidth.html', 'Obsahová stránka'),
 )
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'

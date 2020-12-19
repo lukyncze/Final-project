@@ -1,7 +1,7 @@
 $(function() {
     // Render fixed-top navbar when scrolled down
     $(window).scroll(function(){
-        $('nav').toggleClass('scrolled', $(this).scrollTop() > 5);
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 0);
     });
 
     // Solves responsive mobile navigation bar

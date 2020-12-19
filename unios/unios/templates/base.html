@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Uniosservis.cz - Opravy a modernizace konvenčních obráběcích strojů">
-	  <meta name="keywords" content="Uniosservis, Unios, Obráběcí stroje, Lipník nad Bečvou">
+	  <meta name="keywords" content="Uniosservis.cz, uniosservis, unios, Lipník nad Bečvou, obráběcí stroje, opravy, opravy a modernizace, soustruh, soustruhy, servis, servis a údržba, údržba, náhradní díly, nákup, prodej">
     <meta name="author" content="Lukáš Sukeník">
 
     <script src="https://kit.fontawesome.com/7ffc9ccdb4.js" crossorigin="anonymous"></script>
@@ -19,7 +19,19 @@
   <body>
     {% cms_toolbar %}
     
-    {% include "includes/header.html" %}
+    {% include "includes/nav.html" %}
+
+    {% block header %}
+    <div class="hero hero-pages mb-5">
+      <div class="banner-nadpis text-white text-center">
+        <h1>{% page_attribute 'page_title' %}</h1>
+      </div>
+    </div>
+    {% endblock header %}
+
+    <div class="preloader">
+      <img src="{% static 'img/kolo.png' %}" alt="Chyba v načtení obrázku preloaderu">
+    </div>
 
     <main class="container">
       {% block content %}{% endblock content %}
@@ -27,7 +39,18 @@
 
     {% include "includes/collaboration.html" %}
 
-    {% include "includes/footer.html" %}
+    <div class="nadpis" id="kontakt">
+      <a href="/kontakty#formular">Kontaktujte nás ještě <u>dnes</u></a>!
+    </div>
+  
+    <footer class="text-center text-white">
+        <p>&copy; 2020 UNIOS SERVIS s.r.o.</p>
+        <a href="/admin">Administrace</a>
+    </footer>
+  
+    <div id="scrollToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
