@@ -30,10 +30,24 @@ body {
 }
 
 /* Headings */
-/*
-【N】【a】【s】【t】【y】【l】【o】【v】【a】【t】
-【n】【a】【d】【p】【i】【s】【y】
-*/
+/* h1 - main title; h2 - subtitle, h3 - sections, cards with gears; h4 - text with blue strip, headings in paragraphs + contacts */
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 1.4em;
+}
+
+h4 {
+    font-size: 1.3rem;
+    line-height: 1.5em;
+}
 
 /* Fix horizontal scroll */
 html, body {
@@ -61,7 +75,7 @@ nav {
     display: block;
     color: white;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .nav a:hover {
@@ -129,11 +143,10 @@ header .bg-dark.scrolled {
 
 .hero-home h1 {
     font-size: 5rem;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .hero-pages h1 {
-    font-size: 3.5rem;
     font-weight: 600;
 }
 
@@ -210,7 +223,7 @@ header .bg-dark.scrolled {
     margin-top: 40px;
 }
 
-.sekce h4 {
+.sekce h3 {
     padding: 20px;
     color: white;
     background-color: var(--default-blue);
@@ -220,11 +233,11 @@ header .bg-dark.scrolled {
     text-decoration: none;
 }
 
-.sekce a:hover h4 {
+.sekce a:hover h3 {
     background-color: var(--second-blue);
 }
 
-.sekce a:hover h4, 
+.sekce a:hover h3, 
 .sekce a:hover img {
     box-shadow: #000000aa 2px 2px 15px;
 }
@@ -313,7 +326,8 @@ input, select, textarea {
 
 fieldset button {
     background-color: var(--default-blue);
-    border-color: var(--button-grey);
+    border-color: var(--default-blue);
+    border-width: 1px;
     border-radius: 8px;
     color: white;
     padding: 8px;
@@ -484,19 +498,13 @@ body.mobile-nav-active .nav a::after {
 }
 
 /* Media settings - Hero image */
-@media screen and (min-width: 2000px){
-    .hero-home {
-        height: 360px;
-        padding-top: 110px;
-    }
-    
-    .hero-pages {
-        height: 300px;
-        padding-top: 110px;
+@media screen and (min-width: 2000px){   
+    .hero-home h1 {
+        font-size: 6rem;
     }
 
-    .banner-nadpis h1 {
-        font-size: 6rem;
+    .hero-pages h1 {
+        font-size: 4rem;
     }
 
     .banner-nadpis p {
@@ -516,11 +524,15 @@ body.mobile-nav-active .nav a::after {
     
     .hero-pages {
         height: 200px;
-        padding-top: 80px;
+        padding-top: 100px;
     }
 
-    .banner-nadpis h1 {
-        font-size: 3.5rem;
+    .hero-home h1 {
+        font-size: 4rem;
+    }
+
+    .hero-pages h1 {
+        font-size: 3rem;
     }
 
     .banner-nadpis #slogan {
@@ -529,9 +541,19 @@ body.mobile-nav-active .nav a::after {
     }
 }
 
+@media screen and (max-width: 576px){
+    .hero-pages h1 {
+        font-size: 2.5rem;
+    }
+}
+
 @media screen and (max-width: 524px){
-    .banner-nadpis h1 {
+    .hero-home h1 {
         font-size: 3rem;
+    }
+
+    .hero-pages h1 {
+        font-size: 2rem;
     }
 
     .banner-nadpis #slogan {
@@ -540,9 +562,14 @@ body.mobile-nav-active .nav a::after {
     }
 }
 
+/* Media settings + headings */
 @media screen and (max-width: 425px){
-    .banner-nadpis h1 {
+    .hero-home h1 {
         font-size: 2.25rem;
+    }
+
+    .hero-pages h1 {
+        font-size: 1.75rem;
     }
 
     .banner-nadpis #slogan {
@@ -551,6 +578,28 @@ body.mobile-nav-active .nav a::after {
 
     .banner-nadpis button {
         font-size: 1rem;
+    }
+
+    h2, .nadpis {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    h4 {
+        font-size: 1.0rem;
+    }
+
+    p, li, label, input {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 375px){
+    h4 {
+        font-size: 0.8rem;
     }
 }
 
@@ -623,7 +672,3 @@ body.mobile-nav-active .nav a::after {
         font-size: 0.6rem;
     }
 }
-/*
-【r】【e】【s】【p】【o】【n】【z】【i】【v】【n】【o】【s】【t】
-【w】【e】【b】【u】
-*/
