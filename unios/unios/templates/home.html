@@ -4,32 +4,32 @@
 {% block title %}{% page_attribute "page_title" %}{% endblock title %}
 
 {% block header %}
-<div class="hero hero-home mb-5">
-	<div class="banner-nadpis text-white text-center">
-		<h1>Uniosservis.cz</h1>
-		<div id="slogan">Opravy a modernizace konvenčních obráběcích strojů</div>
-		<a href="#sluzby"><button type="button" class="btn btn-dark">Služby <i class="fas fa-tools"></i></button></a>
-		<a href="/kontakty#formular"><button type="button" class="btn btn-light">Napište nám <i class="fas fa-paper-plane"></i></button></a>
-		<div id="sluzby"></div>
+	<div class="hero hero-home mb-5">
+		<div class="banner-nadpis text-white text-center">
+			<h1>Uniosservis.cz</h1>
+			<div id="slogan">Opravy a modernizace konvenčních obráběcích strojů</div>
+			<a href="#sluzby"><button type="button" class="btn btn-dark">Služby <i class="fas fa-tools"></i></button></a>
+			<a href="/kontakty#formular"><button type="button" class="btn btn-light">Napište nám <i class="fas fa-paper-plane"></i></button></a>
+			<div id="sluzby"></div>
+		</div>
 	</div>
-</div>
 {% endblock header %}
 
 {% block content %}
-{% placeholder "sluzby" %}
-<div class="row sekce mb-5">
-	<div class="col-xs-12 col-md-3">
-		<a href="/opravy-a-modernizace">{% placeholder "sluzba 1" %}</a>
+	{% placeholder "sluzby" %}
+	<div class="row sekce mb-5">
+		<div class="col-xs-12 col-md-3">
+			<a href="/opravy-a-modernizace">{% placeholder "sluzba 1" %}</a>
+		</div>
+		<div class="col-xs-12 col-md-3">
+			<a href="/servis-a-udrzba">{% placeholder "sluzba 2" %}</a>
+		</div>
+		<div class="col-xs-12 col-md-3">
+			<a href="/nahradni-dily">{% placeholder "sluzba 3" %}</a>
+		</div>
+		<div class="col-xs-12 col-md-3">
+			<a href="/nakup-a-prodej">{% placeholder "sluzba 4" %}</a>
+		</div>
 	</div>
-	<div class="col-xs-12 col-md-3">
-		<a href="/servis-a-udrzba">{% placeholder "sluzba 2" %}</a>
-	</div>
-	<div class="col-xs-12 col-md-3">
-		<a href="/nahradni-dily">{% placeholder "sluzba 3" %}</a>
-	</div>
-	<div class="col-xs-12 col-md-3">
-		<a href="/nakup-a-prodej">{% placeholder "sluzba 4" %}</a>
-	</div>
-</div>
-{% placeholder "content" %}
+	{% placeholder "content" %}
 {% endblock content %}

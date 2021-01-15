@@ -156,7 +156,7 @@ header .bg-dark.scrolled {
     margin-bottom: 1rem;
 }
 
-.banner-nadpis button {
+.banner-nadpis button, .btn-dark {
     font-size: 1.1rem;
     padding: 8px 15px;
     border-radius: 8px;
@@ -266,6 +266,10 @@ ul {
 
 .fotky img {
     margin-bottom: 5px;
+}
+
+.o-nas p {
+    font-size: 1.1rem;
 }
 
 /* Gallery */
@@ -538,6 +542,11 @@ body.mobile-nav-active .nav a::after {
     .banner-nadpis #slogan {
         font-size: 1.1rem;
         margin-bottom: 0.7rem;
+    }
+
+    .h-margin-top h2,
+    .h-margin-top h3 {
+        margin-top: 2rem;
     }
 }
 
