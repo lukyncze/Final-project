@@ -601,7 +601,7 @@ body.mobile-nav-active .nav a::after {
         font-size: 1.0rem;
     }
 
-    p, li, label, input {
+    p, li, label, input, select, option, textarea {
         font-size: 0.7rem;
     }
 }
